@@ -5,33 +5,39 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
 
-	// TODO: objektvariable 
+	private String tekst;
 	
 	public Tekst () {
 		
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
+		this.tekst = tekst;
+		this.setBruker(bruker);
+		this.setDato(dato);
+		this.id = id;
+		this.likes = 0;
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
+		this.id = id;
+		this.likes = likes;
+		this.tekst = tekst;
+		this.setBruker(bruker);
+		this.setDato(dato);
 	}
 	
 	public String getTekst() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		return this.tekst;
 	}
 
 	public void setTekst(String tekst) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.tekst = tekst;
 	}
 
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		return "TEKST\n" + super.toString() + this.getTekst() + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
